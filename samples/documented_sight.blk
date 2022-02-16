@@ -1,0 +1,176 @@
+// Catchall for vehicle classes
+matchExpClass{
+  exp_tank:b=yes
+  exp_heavy_tank:b=yes
+  exp_tank_destroyer:b=yes
+  exp_SPAA:b=yes
+}
+
+crosshairHorVertSize:p2= 0, 0
+
+// Rangefinder stuff
+rangefinderProgressBarColor1:c= 255, 60, 60, 255 // Foreground
+rangefinderProgressBarColor2:c=0, 0, 0, 0 // Background
+rangefinderTextScale:r=0.7
+rangefinderUseThousandth:b=yes // DO NOT REMOVE, BREAKS RANGEFINDER IF NOT ADDED
+rangefinderVerticalOffset:r=1.7
+rangefinderHorizontalOffset:r=100.0
+
+// Arcade settings
+detectAllyTextScale:r=0.7
+detectAllyOffset:p2=4, 0.05
+
+// Global settings
+fontSizeMult:r=1.0
+lineSizeMult:r=1.0
+
+drawCentralLineVert:b=no //Basically default crosshair options
+drawCentralLineHorz:b=no
+
+drawSightMask:b=yes
+
+crosshairDistHorSizeMain:p2=0.0125, 0.007 //Length of the lines along the default ballistics range indicator
+crosshairDistHorSizeAdditional:p2= 0.009, 0.00 //Length of the default ballistics range indicator lines along the central vertical aiming axis
+distanceCorrectionPos:p2 = 0.05, 0.059	//Adjust the second number to a lower value if the "distance set" text is out of your view
+drawDistanceCorrection:b=yes // draw or don’t draw text for entered range correction.
+drawAdditionalLines:b = no
+
+
+// Global crosshair settings
+crosshairColor:c = 255, 60, 60, 255
+crosshairLightColor:c = 255, 60, 60, 255
+
+// ?
+textPos:p2 = -0.0203, 0.0
+textShift:r = 0.5
+drawUpward:b = no
+distancePos:p2 = 0.0035, 0
+
+// Vertical distances, annotated number, width from center
+crosshair_distances{
+  //distance:p3= 500, 0, 0
+  //distance:p3= 1000, 0, -0.0006
+  //distance:p3= 1500, 0, 0
+  //distance:p3= 2000, 0, -0.0006
+  //distance:p3= 2500, 0, 0
+  //distance:p3= 3000, 0, -0.0006
+  //distance:p3= 3500, 0, 0
+  //distance:p3= 4000, 0, -0.0006
+  //distance:p3= 4500, 0, 0
+  //distance:p3= 5000, 0, -0.0006
+  //distance:p3= 5500, 0, 0
+  //distance:p3= 6000, 0, -0.0006
+}
+
+// Horizontal ranges, annotated number
+crosshair_hor_ranges{
+  range:p2=-60, 0
+  range:p2=-40, 0
+  range:p2=-30, 0
+  range:p2=-20, 0
+  range:p2=-10, 0
+  range:p2=10, 0
+  range:p2=20, 0
+  range:p2=30, 0
+  range:p2=40, 0
+  range:p2=60, 0
+}
+
+// Area where circles are drawn
+drawCircles {
+    circle {
+      segment:p2 = 0.0, 360.0 // Sector of a circle
+      pos:p2 = 0.0, 0.0 // Position
+      diameter:r = 0.001
+      thousandth:b = yes // Diameter. If thousandth=yes, then in thousandths
+      size:r = 3 // Line Thickness
+      move:b = no;// Moves with rangefinder
+    }
+}
+drawLines{
+	// Example line
+	line {
+		// x border, z border, x center, y center
+		line:p4=0.0, -0.4, 0.0, 0.4
+		move:b=no
+	}
+
+//Middle reticle
+   line {
+    line:p4=0.03, -0.0, 0.013, -0.0
+    move:b=no
+  }
+   line {
+    line:p4=-0.03, 0.0, -0.013, 0.0
+    move:b=no
+  }
+//Middle reticle ends ^
+//Large reticle˘
+   line {
+    line:p4=-0.048, -0.0, -0.25, -0.0
+    move:b=no
+  }
+    line{
+    line:p4=0.048, -0.0, 0.25, -0.0
+    move:b=no
+  }
+    line{
+    line:p4=-0.0, -0.07, -0.0, -0.09
+    move:b=no
+  }
+   line{
+    line:p4=-0.0, 0.07, -0.0, 0.18
+    move:b=no
+  }
+//Large reticle ends ^
+//Sight distance set line (The little "L" shape in on the right)
+    line{
+    line:p4=0.05, 0.052, 0.115, 0.052 //Adjust the second/fourth number to a lower value if the "distance set" text is out of your view
+    move:b=no
+  }
+	line{
+    line:p4=0.05, 0.043, 0.05, 0.052 //Adjust the second/fourth number to a lower value if the "distance set" text is out of your view
+    move:b=no
+  }
+//Sight distance set line ends ^
+
+//Outer corners
+//Top left
+    line{
+    line:p4=-0.35, -0.14, -0.25, -0.14
+    move:b=no
+  }
+	line{
+    line:p4=-0.35, -0.14, -0.35, -0.08
+    move:b=no
+  }
+//Top right
+line{
+    line:p4=0.35, -0.14, 0.25, -0.14
+    move:b=no
+  }
+	line{
+    line:p4=0.35, -0.14, 0.35, -0.08
+    move:b=no
+  }
+//Bottom left
+    line{
+    line:p4=-0.35, 0.14, -0.25, 0.14
+    move:b=no
+  }
+	line{
+    line:p4=-0.35, 0.14, -0.35, 0.08
+    move:b=no
+  }
+//Bottom right
+line{
+    line:p4=0.35, 0.14, 0.25, 0.14
+    move:b=no
+  }
+	line{
+    line:p4=0.35, 0.14, 0.35, 0.08
+    move:b=no
+  }
+//Outer corners ends ^
+}
+
